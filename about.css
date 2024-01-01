@@ -1,0 +1,229 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* RESET */
+/*   html {
+    scroll-behavior: smooth;
+    background-image: radial-gradient(var(--BGCOLR-LIGHT), rebeccapurple);
+} */
+
+ img {
+    display: block;
+    width: 100%;
+    height: auto;
+ } 
+
+
+  :root {
+    --PADDING: 10px;
+    --MARGIN: 5px;
+    --FSMALL: 20px;
+    --FSIZE: clamp(1rem, 2.2vh, 1.5rem);
+    --FFAMILY: monospace;
+    --BGCOLR-LIGHT: #fff;
+    --BGCOLOR-DARK: #000;
+    --LCOLOR: #fff;
+    --DCOLOR: #333;
+    --CCOLOR: orange;
+    --BORDER: 1px solid #333;
+    --BORDER-RAD: 5px;
+ } 
+
+
+ /* ENTITIES */
+
+ body {
+    font-size: var(--FSIZE);
+    font-family:var(--FFAMILY);
+    background-color: var(--BGCOLR-LIGHT);
+    min-height: 100vh;
+    max-width: 800px;
+    margin: 0 auto;
+    border-left: var(--BORDER);
+    border-right: var(--BORDER);
+    line-height: 1.5rem;
+ }
+
+ .menu h1 {padding: var(--MARGIN);}
+
+ .menu {
+    background-color: var(--BGCOLOR-DARK);
+    color: var(--BGCOLR-LIGHT);
+    border-bottom: var(--BORDER);
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    padding: var(--PADDING);
+ }
+
+ .button {display: block;}
+
+ .menu h1 {
+    padding: 5px;
+ }
+
+ .menu-button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: transparent;
+    border: none;
+ }
+
+ .menu-icon,
+ .menu-icon::before,
+ .menu-icon::after {
+    position: absolute;
+    width: 30px;
+    height: 5px;
+    background-color: var(--BGCOLR-LIGHT);
+    transition: all 0.5s;
+ }
+
+ .menu-icon::before,
+ .menu-icon::after {content: "";}
+
+ .menu-icon::before {
+    transform: translate(-15px, -10px);
+ }
+
+ .menu-icon::after {
+    transform: translate(-15px, 10px);
+ }
+
+ a:any-link {
+   color: var(--LCOLOR);
+   text-decoration: none;
+}
+
+a:hover,
+a:focus {
+   color: red;
+}
+
+
+ nav {
+    display: none;
+    transform-origin: top center;
+    background-color: var(--BGCOLOR-DARK);
+    animation: Slide 1s ease-in-out forwards;
+ }
+
+ @keyframes Slide {
+    0% {
+        transform: scaleY(0);
+    }
+
+    80% {
+        transform: scaleY(120%);
+    }
+
+    100% {
+        transform: scaleY(100%);
+    }
+ }
+
+ .header nav {
+   background-color: var(--BGCOLOR-DARK);
+   /* margin-bottom: 2px;
+   border: var(--BORDER);*/
+   box-shadow: none; 
+}
+
+nav ul {
+   display: flex;
+   flex-flow: column nowrap;
+   list-style-type: none;
+   padding: var(--PADDING);
+   font-weight: bold;
+}
+
+nav li {
+   padding: var(--MARGIN);
+}
+
+ :is(header:hover, header:focus-within) .menu-icon {
+    background-color: transparent;
+    transform: rotate(720deg);
+}
+:is(header:hover, header:focus-within) .menu-icon::before {
+    transform: translateX(-15px) rotate(45deg);
+}
+:is(header:hover, header:focus-within) .menu-icon::after {
+    transform: translateX(-15px) rotate(-45deg);
+}
+:is(header:hover, header:focus-within) nav {
+   display: block;
+}
+
+h2,h3,
+span {
+    color: var(--CCOLOR);
+    padding: var(--MARGIN);
+    margin-top: 10px;
+    text-align: center;
+}
+
+p, details {
+    padding-left: 5px;
+    white-space: wrap;
+    padding-top: 5px;
+}
+
+details {height: 25vh;}
+
+/* CHEF */
+
+main {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h4 {
+    margin-bottom: 10px;
+    font-size: 25px;
+    color: var(--CCOLOR);
+}
+
+figure {
+    width: 70%;
+    border: var(--BORDER);
+    box-shadow: 5px 9px 5px 5px rgba(204, 200, 200, 0.571);
+    border-radius: var(--BORDER-RAD);
+    padding: var(--PADDING);
+    background-color: transparent;
+    text-align: center;
+}
+
+figcaption {
+    padding: 5px;
+    font-weight: bolder;
+    color: #000;
+    font-size: 22px;
+    font-family: cursive;
+}
+
+figure img {
+    border: var(--BORDER);
+    border-radius: 50%;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--BGCOLOR-DARK);
+    text-align: center;
+    color: var(--LCOLOR);
+}
+
+@media screen and (max-width: 1000px) {
+}

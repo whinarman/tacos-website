@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Senior Dev.">
+    <meta name="description" content="First web dev project after 13hrs of html and css ">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="contact.css">
+    <title>Taco Shop</title>
+</head>
+
+<body>
+    <header class="header">
+        <section class="menu">
+            <h1 class="header-title"> THE TACO SHOP</h1>
+            <div class="button">
+                <button class="menu-button">
+                    <div class="menu-icon"></div>
+                </button>
+            </div>
+        </section>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="m.html">Menu</a>
+                </li>
+                <li>
+                    <a href="s.html">Store Hours</a>
+                </li>
+                <li>
+                    <a href="a.html">About</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <article>
+        <figure>
+            <img src="img/tacos_and_drink_1000x667.png" alt="Tacos and Drinks" title="Tacos and Drinks">
+        </figure>
+    </article>
+
+    <section>
+        <h2> Address</h2>
+        <address>
+            Margaritaville Island Reserve Riviera Caunca <br>
+            Behia Peteempich Puerto Morelos, Mexico <br>
+            Colonia Morelos, Mexico 775880
+            <br><br>
+            Phone: <a class="tel" href="tel: +233509455649">050-945-5649</a>
+        </address>
+    </section>
+    <hr>
+    <main>
+        <form action="https://httpbin.org/get" method="get"> <span>Contact Us Form</span>
+             <fieldset>
+                <p>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Dave Gray" required>
+                </p>
+                 <p>
+                    <label for="name">Email</label>
+                    <input type="text" name="name" id="name" placeholder="example@gmail.com" required>
+                </p>
+                 <textarea name="Your Message" id="message" cols="30" rows="10" placeholder="Type your message" required></textarea>
+             </fieldset>
+             <div class="button-send">
+                <button type="submit" class="send">Send</button>
+                <button type="reset" class="send">Reset</button>
+             </div>
+            </form>
+    </main>
+    <footer>
+        Copyright &copy; 2023 Taco Shop
+   </footer>
+</body>
+
+</html>
